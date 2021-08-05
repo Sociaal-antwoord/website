@@ -4480,7 +4480,6 @@ h6 {
 	border-radius: 100%;
 	background-color: var(--ballColor);
 	transform: rotate(45deg);
-  border: var(--yellowComplementary) solid 5px;
 }
 
 .ball.ball-alt {
@@ -4622,5 +4621,5 @@ h6 {
   color: white!important;
   padding: 13px;
   border-radius: 5px;
-  background: rgba(33, 51, 235,.55);
+  background: rgba(33, 51, 235,1);
 }
