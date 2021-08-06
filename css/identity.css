@@ -14,6 +14,13 @@
 	font-style: normal
 }
 
+::selection {
+  background: #ffb7b7;
+}
+::-moz-selection {
+  background: #ffb7b7;
+}
+
 
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
@@ -25,7 +32,7 @@
  */
 
 :root {
-  --hoverTime: .25s;
+  --animationTime: .25s;
 	--ballColor: #FFE0D2;
 	--blue: #007bff;
 	--indigo: #6610f2;
@@ -34,6 +41,7 @@
 	--red: #dc3545;
 	--orange: #fd7e14;
 	--yellow: #FFE0D2;
+	--yellow2: #ffb7b7;
 	--yellowComplementary: #2133EB;
 	--green: #28a745;
 	--teal: #20c997;
@@ -139,15 +147,19 @@ small {
 	font-size: 80%
 }
 
+
+
 a {
 	color: var(--yellowComplementary);
 	text-decoration: none;
-	background-color: transparent
+	background-color: transparent;
+	transition: color var(--animationTime), background-color var(--animationTime);
 }
 
 a:hover {
-	color: #a85913;
-	text-decoration: underline
+	background-color: var(--yellow2);
+	color: black;
+	text-decoration: none;
 }
 
 a:not([href]) {
@@ -1153,7 +1165,6 @@ input[type=time].form-control {
 .btn-primary:hover {
 	color: #fff;
 	background-color: var(--yellowComplementary);
-	border-color: #bf6516
 }
 
 .btn-primary:focus {
@@ -1511,7 +1522,10 @@ input[type=time].form-control {
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	padding: .5rem 1rem;
+}
 
+.navbar .nav-link:hover {
+	background-color: rgba(0,0,0,0);
 }
 
 .navbar .container,
@@ -1908,12 +1922,12 @@ input[type=time].form-control {
 	min-height: 1px;
 	padding: 1.25rem;
 	background-color: var(--yellow);
-  transition: background-color var(--hoverTime);
+  transition: background-color var(--animationTime);
 }
 
 .card-body-hover:hover {
   cursor: pointer;
-  background-color: rgb(240,240,240);
+  background-color: var(--yellow2);
 }
 
 .card-title {
@@ -1962,7 +1976,7 @@ input[type=time].form-control {
 .card-img-top {
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
-	width: 100%
+	width: 100%;
 }
 
 .card-img,
@@ -4581,6 +4595,15 @@ h6 {
 	background-color: var(--yellow);
 }
 
+.process-section__items h4 span {
+	transition: color var(--animationTime), background-color var(--animationTime);
+}
+
+.process-section__items:hover h4 span {
+	color: var(--yellow);
+	background-color: var(--yellowComplementary);
+}
+
 .process-section__items span {
 	display: flex;
 	color: var(--yellowComplementary);
@@ -4615,6 +4638,7 @@ h6 {
   padding: 5px;
   border-radius: 5px;
   background: rgba(255, 255, 255,.55);
+  color: black;
 }
 
 .highlight-yellow span {
