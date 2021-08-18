@@ -11,7 +11,7 @@ $(document).ready(function(){
   /* Initialize navbar style on scroll */
   scrollCheck($(window).scrollTop());
 
-  $(window).scroll(function() {    
+  $(window).scroll(function() {
       var scroll = $(window).scrollTop();
       scrollCheck(scroll);
   });
@@ -40,8 +40,8 @@ $(document).ready(function(){
   .not("[data-toggle='collapse']")
   .click(function(event) {
     if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
       location.hostname == this.hostname
       ) {
       var target = $(this.hash);
